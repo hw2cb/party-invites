@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewGuests</title>
+</head>
+<body>
+    <div>
+        <tr><td>Имя</td><td>Email</td><td>Телефон</td><td>Будет ли на вечеринке</td></tr> <br />
+        @foreach (PartyInvites.Models.GuestResponse item in ViewBag.item)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Email
+                </td>
+                <td>
+                    @item.Phone
+                </td>
+                <td>
+                    @item.WillAttend
+                </td>
+                <br>
+            </tr>
+        }
+    </div>
+</body>
+</html>
